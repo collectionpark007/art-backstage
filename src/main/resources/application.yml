@@ -1,0 +1,26 @@
+#运行端口
+server:
+  port: 8080
+
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/art_backstage?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+#打印SQL语句
+logging:
+  level:
+      com.art.mapper: debug
+
+
+mybatis:
+  configuration:
+      mapUnderscoreToCamelCase: true
+  table:
+    auto: update
+    model:
+      pack: com.art.entity
+    database:
+      type: mysql
