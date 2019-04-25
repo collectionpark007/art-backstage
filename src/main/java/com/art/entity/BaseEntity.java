@@ -1,10 +1,10 @@
 package com.art.entity;
 
+import com.art.mapper.actable.annotation.Column;
+import com.art.mapper.actable.command.BaseModel;
+import com.art.mapper.actable.constants.MySqlTypeConstant;
+import com.art.support.annotation.MyColumn;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gitee.sunchenbin.mybatis.actable.annotation.Column;
-import com.gitee.sunchenbin.mybatis.actable.command.BaseModel;
-import com.gitee.sunchenbin.mybatis.actable.constants.MySqlTypeConstant;
-import com.art.annotation.MyColumn;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

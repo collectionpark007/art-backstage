@@ -1,4 +1,4 @@
-package com.art.annotation;
+package com.art.support.annotation;
 
 import java.lang.annotation.*;
 
@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * <p>
  *
  * @Author: never
- * @Date: 2019/04/22 10:32
+ * @Date: 2019/4/16 下午10:32
  */
 @Documented
 @Target(ElementType.TYPE)

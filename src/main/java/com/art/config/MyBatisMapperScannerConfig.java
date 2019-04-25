@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author: never
- * @Date: 2019/04/22 上午12:10
+ * @Date: 2019/4/17 上午12:10
  */
 @Configuration
 @AutoConfigureAfter(MybatisTableConfig.class)
@@ -15,7 +15,7 @@ public class MyBatisMapperScannerConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("com.art.mapper.*;com.gitee.sunchenbin.mybatis.actable.dao.*");
+        mapperScannerConfigurer.setBasePackage("com.art.mapper.*");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         return mapperScannerConfigurer;
     }

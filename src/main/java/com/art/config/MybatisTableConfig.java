@@ -12,10 +12,10 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 /**
  * @Author: never
- * @Date: 2019/04/22 11:57
+ * @Date: 2019/4/16 下午11:57
  */
 @Configuration
-@ComponentScan(basePackages = {"com.gitee.sunchenbin.mybatis.actable.manager.*"})
+@ComponentScan(basePackages = {"com.art.mapper.actable.manager.*"})
 public class MybatisTableConfig {
 
     @Value("${spring.datasource.driver-class-name}")
@@ -64,7 +64,7 @@ public class MybatisTableConfig {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:/mapper/*.xml"));
         sqlSessionFactoryBean.setTypeAliasesPackage("com.art.entity.*");
         return sqlSessionFactoryBean;
     }
